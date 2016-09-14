@@ -1,0 +1,546 @@
+@font-face {
+    font-family: "font1";
+    src: url(fon.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "font2";
+    src: url(font-2.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "font3";
+    src: url(font-3.ttf) format("truetype");
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif, arial;
+}
+
+@keyframes rotatee
+{
+	0% {transform:rotate(0deg);}
+	100% {transform:rotate(360deg);}
+}
+
+@-webkit-keyframes rotatee
+{
+	0% {transform:rotate(0deg);}
+	100% {transform:rotate(360deg);}
+}
+
+#mask
+{
+color:white;
+position:fixed;
+top:0;
+left:0;
+bottom:0;
+right:0;
+z-index:10;
+text-align:center;
+background:black;
+}
+
+#mask span
+{
+position:relative;
+top:30%;
+}
+
+#mask span img
+{
+animation:rotatee 1s;
+animation-iteration-count:infinite;
+-webkit-animation:rotatee 1s;
+-webkit-animation-iteration-count:infinite;
+}
+
+
+
+
+.navi
+{
+	width: 100%;
+	position: fixed;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif, arial;
+	background-color: #eaf0f1;
+	padding: 12px;
+	font-size: 125%;
+	text-align: right;
+	z-index: 1;
+}
+
+.logo
+{
+	background-color: #0099cc;
+	position: absolute;
+	padding: 12px 10px;
+	top: 0; left: 0;
+	color: white;
+	z-index: 3;
+}
+
+
+
+.name
+{
+	position: absolute;
+	top: 12px; left: -78px;
+	z-index: 2;
+	transition: left 0.2s ease-out;
+}
+
+.navi:hover .name
+{
+	left: 75px;
+}
+
+.contact
+{
+	margin-right: 20px;
+	font-size: 90%;
+	padding: 10px;
+	border-bottom: solid 0px;
+	transition: border-bottom 0.1s;
+
+}
+
+.contact:hover
+{
+	border-bottom: solid 4px #009999;
+}
+
+.navi a
+{
+	text-decoration: none;
+	color: inherit;
+}
+
+#fixing
+{
+	height: 48px;
+}
+
+.story
+{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background: url('images/ss.jpg') no-repeat;
+	background-size: cover;
+	/*Load all three wallpapers so that no lag when loading with JS.skrollr.js*/
+}
+
+.backGround
+{
+	z-index: 0;
+	position: absolute;
+	top:0;left:0;right:0;bottom:0;
+}
+
+#back2
+{
+	background: url('images/boards.jpg') no-repeat;
+	background-size: cover;
+}
+
+#back3
+{
+	background: url('images/backk.jpg') no-repeat;
+	background-size: cover;
+}
+
+
+.storychoti
+{
+	display: none;
+}
+
+.profile
+{
+	width: 70%;
+	background-color: white;
+	position: absolute;
+	margin: auto;
+	top: 10%;
+	left: 10%;
+	padding: 20px;
+	padding-bottom: 30px;
+	box-shadow: 0 0 5px white;
+}
+
+
+
+.profile-heading
+{
+	line-height: 25px;
+	color: #009999;
+	font-size: 300%;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.profile-heading span
+{
+	color: gray;
+	font-size: 20px;
+}
+
+.profile img
+{
+	display: inline-block;
+	margin-right: 10%;
+	margin-bottom: 5%;
+	width: 180px;
+}
+
+.info
+{
+	display: inline-block;
+	margin: 0;
+	position: relative;
+}
+
+.scroll-down
+{
+	text-align: center;
+	width: 100%;
+	font-size: 200%;
+	color: white;
+	position: absolute;
+	top: 500px;
+	left: -30px;
+}
+
+@keyframes up-down
+		{
+            0%   {top: 80px;}
+            50%  {top: 90px;}
+            100% {top: 80px;}
+        }
+
+@-webkit-keyframes up-down
+		{
+            0%   {top: 80px;}
+            50%  {top: 90px;}
+            100% {top: 80px;}
+        }
+
+.scroll-down img
+{
+	position: absolute;
+	animation: up-down 2s;
+	animation-iteration-count: infinite;
+	-webkit-animation: up-down 2s;
+	-webkit-animation-iteration-count: infinite;
+	top: 80px;
+	left: 48.5%;
+}
+
+.prog
+{
+	font-family: font1;
+	position: absolute;
+	color: white;
+	top: 100px;
+	left: 10%;
+	width: 100%;
+}
+
+.prog div
+{
+	position: absolute;
+	top: 130px;
+	font-size: 100%;
+}
+
+.prog span
+{
+	position: absolute;
+	font-size: 400%;
+}
+
+.skills span
+{
+	position: absolute;
+	color: white;
+	font-weight: 800;
+	font-family: font2;
+}
+
+.one
+{
+	top: 10%;
+	left: 1%;
+	font-size: 400%;
+}
+
+.nom
+{
+	margin: 0;
+	margin-left: 15%;
+	list-style-type: circle;
+}
+
+.two
+{
+	color: white;
+	position: relative;
+	font-size: 300%;
+	font-family: font3;
+	left: 0;
+	top: 1%;
+}
+
+.three
+{
+	font-family: font3;
+}
+
+.three ul
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	position: absolute;
+	width: 100%;
+	left: 12%;
+	top: 20%;
+}
+
+.three ul li
+{
+	padding: 2% 1.5%;
+	text-align: center;
+	display: inline-block;
+	background-color: white;
+	width: 22%;
+	font-size: 190%;
+	transition: background-color 0.5s;
+	position: relative;
+}
+
+.three ul li:hover
+{
+	background-color: #0099cc;
+	color:white;
+}
+
+
+.three li a
+{
+	color: inherit;
+	text-decoration: none;
+}
+
+.three li img
+{
+	width: 90%;
+}
+
+.three li+li
+{
+	margin-left: 2%;
+}
+
+.con
+{
+	
+	width: 100%;
+	height: 100%;
+}
+
+.con iframe
+{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 9;
+}
+
+.backG
+{
+	background: url('images/ss.jpg') no-repeat;
+	background-size: cover;
+	position: fixed;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -13;
+}
+
+
+@media (max-width: 1100px)
+{
+
+
+	.storychoti
+	{
+		display:block;
+	}
+	
+	.story
+	{
+		display:none;
+	}
+
+	.profile
+	{
+		position: initial;
+		margin: 10% auto;
+		text-align: center;
+	}
+
+	.info
+	{
+		text-align: left;
+	}
+
+	.three ul
+	{
+		position: initial;
+	}
+
+	.skills span
+	{
+		position: initial;
+		color: #009999;
+		font-size: 200%;
+		margin-left: 10px; 
+	}
+
+	.skills
+	{
+		font-size: 130%;
+		padding: 10% 0;
+		width: 80%;
+		background-color: white;
+		margin: 0 auto;
+		box-shadow: 0 0 5px white;
+	}
+
+	.Projects
+	{
+		padding: 10% 0;
+		width: 80%;
+		margin: 10% auto;
+		background-color: white;
+		box-shadow: 0 0 5px white;
+	}
+
+	.two
+	{
+		margin-left: 5%; 
+		color: #009999;
+	}
+
+	.three
+	{
+		text-align: center;
+		margin-top: 10%;
+	}
+
+	.three ul li
+	{
+		display: block;
+		width: 80%;
+		margin: 10px auto;
+		border: solid 2px #0099cc;
+		padding-right: 0;
+	}
+}
+
+
+.allPP
+{
+	font-size: 90%;
+	padding: 10px;
+	padding-right: 30px;
+}
+
+.allPP ul
+{
+	display: none;
+	list-style-type: none;
+	position: absolute;
+	right: 23px;
+	margin: 0;
+	padding: 10px 0;
+	width: 120px;
+	margin-top:5px; 
+	background-color: #009999;
+	padding-bottom: 0;
+}
+
+.allPP ul li
+{
+	padding: 10px 10px;
+	text-align: center;
+}
+
+.allPP:hover ul
+{
+	display: block;
+}
+
+.allPP:hover
+{
+	background-color: #009999;
+	color: white;
+}
+
+.allPP ul li:hover
+{
+	background-color: white;
+	color: #009999;
+}
+
+.foto
+{
+	font-size: 200%;
+	text-align: center;
+	width: 70%;
+	margin: 20px auto;
+	background-color: white;
+	box-shadow: 0 0 20px white;
+}
+
+.foto img
+{
+	width: 25%;
+}
+
+.foto span
+{
+	font-size: 200%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

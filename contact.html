@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body
+		{
+			margin: 0;
+			padding: 0;
+		}
+
+		.main
+		{
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			
+			
+		}
+
+		span
+		{
+			color: white;
+			font-family: 'Helvetica Neue', Helvetica, sans-serif, arial;
+			font-size: 300%;
+		}
+
+		#form
+		{
+			position: relative;
+			top:10%;
+			margin-left: 10%;
+		}
+
+		input
+		{
+			border-radius: 5px;
+			padding: 5px 15px;
+			font-size: 150%;
+		}
+
+		textarea
+		{
+			border-radius: 5px;
+			height: 100%;
+			width: 60%;
+			padding: 5px 15px;
+			font-size: 150%;
+
+		}
+
+		.subenabled
+		{
+			background-image: -ms-linear-gradient(top, #fceabb 0%, #FCCD4D 50%, #fbdf93 100%);
+
+			background-image: -moz-linear-gradient(top, #fceabb 0%, #FCCD4D 50%, #fbdf93 100%);
+
+			background-image: -o-linear-gradient(top, #fceabb 0%, #FCCD4D 50%, #fbdf93 100%);
+
+			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fceabb), color-stop(50, #FCCD4D), color-stop(100, #fbdf93));
+
+			background-image: -webkit-linear-gradient(top, #fceabb 0%, #FCCD4D 50%, #fbdf93 100%);
+
+			background-image: linear-gradient(to bottom, #fceabb 0%, #FCCD4D 50%, #fbdf93 100%);
+		}
+
+		.subdisabled
+		{
+			background-color: gray;
+			color: #4b4a51;
+		}
+
+
+		
+		
+
+
+	</style>
+</head>
+<body>
+<div class="main" style="background: #009999">
+	<div class="main" style="background: rgba(0,0,0,0.75);">
+		<div id="form">
+			<span>Feel Free to contact me. I'd love to chat.</span>
+			<br><br><br><br>
+			
+			<form action="cont2.php" method="POST">
+				<input id="in1" type="text" name="name" placeholder="Name"></input><br>
+				<input id="in2" type="text" name="mailid" placeholder="Email"></input><br>
+				<textarea id="in3" rows="7" type="text" name="message" placeholder="Message..."></textarea>
+				<br><input  id="sub" type="submit" value="Send Message"></input>
+			</form>
+
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+	var but=document.getElementById("sub");
+	but.disabled=true;
+	but.className="subdisabled";
+
+	var inp1=document.getElementById("in1");
+	var inp2=document.getElementById("in2");
+	var inp3=document.getElementById("in3");
+
+	function validateEmail()
+	{
+	    var x = inp2.value;
+	    var atpos = x.indexOf("@");
+	    var dotpos = x.lastIndexOf(".");
+	    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) 
+	    {
+	        return false;
+	    }
+	    else
+	    {
+	    	return true;
+	    }
+	}
+
+	function validate()
+	{
+		if(inp1.value=='' || !(validateEmail()) || inp3.value=='')
+		{
+			console.log(typeof(inp2.value));
+			but.disabled=true;
+			but.className="subdisabled";
+		}
+		else
+		{
+			but.disabled=false;
+			but.className="subenabled";
+		}
+	}
+
+	inp1.addEventListener("keydown", validate);
+	inp2.addEventListener("keydown", validate);
+	inp3.addEventListener("keydown", validate);
+	inp1.addEventListener("keyup", validate);
+	inp2.addEventListener("keyup", validate);
+	inp3.addEventListener("keyup", validate);
+	
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
